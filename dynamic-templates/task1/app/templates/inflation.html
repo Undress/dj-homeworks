@@ -17,9 +17,51 @@
       <div class="row">
         <h1 class="col s12">Инфляция в России</h1>
         <div class="col s12 m8">
+        <table>
+          <thead>
+            <tr>
+              {% for field in header %}
+              <td>{{ field }}</td>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in data %}
+            <tr>
+              {% for field in row %}
+                {% if field < 0 %}
+                <td bgcolor="#00ab2e">
+                  {{ field }}
+                </td>
+                {% elif forloop.last %}
+                <td bgcolor="#9c9c9c">
+                  {{ field }}
+                </td>
+                {% elif field > 1 and field < 2 %}
+                <td bgcolor="#ff8080">
+                  {{ field }}
+                </td>
+                {% elif field > 2 and field < 5 %}
+                <td bgcolor="#ff5252">
+                  {{ field }}
+                </td>
+                {% elif field > 5 %}
+                <td bgcolor="#ff0000">
+                  {{ field }}
+                </td>
+                {% elif field == "" %}
+                <td>-</td>
+                {% else %}
+                <td>
+                  {{ field }}
+                </td>
+                {% endif %}
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
         
-        <!-- Ваша логика -->
-
         </div>
       </div>
     {% endblock %}
