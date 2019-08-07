@@ -1,5 +1,7 @@
 import requests
+import datetime
 from django.shortcuts import render
+
 
 
 def do_request():
@@ -16,6 +18,10 @@ def top_reddit_view(request):
     template_name = 'top_reddit.html'
 
     posts = do_request()
+
+    # test = posts[0]['data']['selftext'].split(' ') 
+    
+
     context = {
         'posts': posts,
         'prefix': 'https://reddit.com'
