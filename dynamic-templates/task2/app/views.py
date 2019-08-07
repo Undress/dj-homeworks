@@ -3,17 +3,30 @@ from django.shortcuts import render
 
 def home_view(request):
     template_name = 'app/home.html'
-    return render(request, template_name)
+    context = {
+        'template_name': template_name
+    }
+
+    return render(request, template_name,
+                  context)
 
 
 def about_view(request):
     template_name = 'app/about.html'
-    return render(request, template_name)
+    context = {
+        'template_name': template_name
+    }
+    return render(request, template_name,
+                  context)
 
 
 def contacts_view(request):
     template_name = 'app/contacts.html'
-    return render(request, template_name)
+    context = {
+        'template_name': template_name
+    }
+    return render(request, template_name,
+                  context)
 
 
 def examples_view(request):
@@ -33,7 +46,8 @@ def examples_view(request):
         'img': 'imac.jpg'
     }]
     context = {
-        'items': items
+        'items': items,
+        'template_name': template_name
     }
     return render(request, template_name,
                   context)
