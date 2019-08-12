@@ -16,5 +16,50 @@
       "author": "Джордж Оруэл",
       "pub_date": "2016-12-06"
     }
+  },
+    {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "name": "Преступление и наказание",
+      "author": "Л.Н. Толстой",
+      "pub_date": "2017-10-09"
+    }
+  },
+    {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "name": "Как я встретил вашу маму",
+      "author": "Джордж Буш",
+      "pub_date": "2019-01-06"
+    }
+  },
+    {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "name": "Ямайка",
+      "author": "Наркоман Павлик",
+      "pub_date": "2019-05-09"
+    }
+  },
+    {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "name": "Руслан и Людмила",
+      "author": "А.С. Пушкин",
+      "pub_date": "2012-03-15"
+    }
+  },
+     {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "name": "Конь и кукушка",
+      "author": "Петя Зайцев",
+      "pub_date": "2019-05-09"
+    }
   }
 ]
