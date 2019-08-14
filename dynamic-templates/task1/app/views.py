@@ -24,8 +24,6 @@ def inflation_view(request):
     				except ValueError:
     					row[index] = item 
     			context['data'].append(row)
-    			# context[row[0]] = row[1:]
     		
-    print(context)
     return render(request, template_name,
                   context)
