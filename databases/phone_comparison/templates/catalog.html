@@ -6,6 +6,41 @@
     <div class="container">
         <div class="header">
             <h1>Сравнение телефонов</h1>
+            <div class="row">
+            	<div class="col">
+            		<div class="row font-weight-bold">Модель:</div>
+            		<div class="row">Цена:</div>
+            		<div class="row">ОС:</div>
+            		<div class="row">Процессор:</div>
+            		<div class="row">Кол-во ядер:</div>
+            		<div class="row">RAM:</div>
+            		<div class="row">ROM:</div>
+            		<div class="row">Камера:</div>
+            		<div class="row">Разрешение экрана:</div>
+            		<div class="row">Батарея:</div>
+            		<div class="row">Дополнительно:</div>
+            	</div>
+            	{% for k, v in data.items %}
+            	<div class="col">
+            		<div class="row font-weight-bold">{{ v.model }}</div>
+            		<div class="row">{{ v.price }}</div>
+            		<div class="row">{{ v.os }}</div>
+            		<div class="row">{{ v.cpu }}</div>
+            		<div class="row">{{ v.cores }}</div>
+            		<div class="row">{{ v.ram }}</div>
+            		<div class="row">{{ v.rom }}</div>
+            		<div class="row">{{ v.camera }}</div>
+            		<div class="row">{{ v.resolution }}</div>
+            		<div class="row">{{ v.battery }}</div>
+            		{% for addon in v.addons %}
+            		<div class="row">{{ addon }}</div>
+            		{% endfor %}
+            	</div>
+            	{% endfor %}
+            </div>
+
         </div>
     </div>
 {% endblock %}
+
+         
