@@ -5,10 +5,24 @@
 {% block content %}
     <div class="container">
         <div class="header">
-            <h1>Телефон</h1>
+            <h1><a href="{% url 'catalog' %}">Телефон</a></h1>
         </div>
         <div class="content">
+        	<div class="row">
 
+        		<h2 class="text-primary">{{ data.name }}</h2>
+        	</div>
+        	<div class="row">
+        		<div class="col-md-4 align-self-center">
+        			<img src="{{data.image}}"></img>
+        		</div>
+        		<div class="col-md-8 align-self-start">
+        			<p>Стоимость: {{ data.price }}</p>
+        			<p>Дата выпуска: {{ data.release_date }}</p>
+        			<p>LTE: {{ data.lte_exists|yesno:'Да, Нет'}}
+        			</p>
+        		</div>
+        	</div>
         </div>
     </div>
 {% endblock %}
